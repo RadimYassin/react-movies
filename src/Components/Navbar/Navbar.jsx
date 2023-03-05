@@ -23,10 +23,10 @@ function Navbar() {
               <Navlinks to='/'>HOME</Navlinks>
             </NavItem>
             <NavItem>
-              <Navlinks to='/'>WAHTCHLIST</Navlinks>
+              <Navlinks to='/WatchList'>WAHTCHLIST</Navlinks>
             </NavItem>
             <NavItem>
-              <Navlinks to='/'>TOP</Navlinks>
+              <Navlinks to='/Top'>TOP</Navlinks>
             </NavItem>
            
              
