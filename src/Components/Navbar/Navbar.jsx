@@ -15,18 +15,18 @@ function Navbar() {
         <NavContainer>
           <NavLogo to='/'>
             <NavIcon />
-          movie
+          movies
           </NavLogo>
           <MobileIcon onClick={handelClick}>{click ? <FaTimes /> : <FaBars />}</MobileIcon>
            <NavMenu  onClick={handelClick} click={click} >
             <NavItem>
-              <Navlinks to='/'>HOME</Navlinks>
+              <Navlinks to='/'>home</Navlinks>
             </NavItem>
             <NavItem>
-              <Navlinks to='/WatchList'>WAHTCHLIST</Navlinks>
+              <Navlinks to='/WatchList'>watchlist</Navlinks>
             </NavItem>
             <NavItem>
-              <Navlinks to='/Top'>TOP</Navlinks>
+              <Navlinks to='/Top'>Trending</Navlinks>
             </NavItem>
            
              
