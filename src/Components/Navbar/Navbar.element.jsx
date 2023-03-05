@@ -4,7 +4,7 @@ import {TbMovie} from 'react-icons/tb'
 import { Link } from 'react-router-dom'
  
  export const Nav=styled.nav`
-    background-color:#101522;
+    background-color:#0d253f;
     height:80px;
     display:flex;
     justify-content: center;
@@ -83,7 +83,7 @@ export const NavItem=styled.li`
     height:80px;
     border-bottom:2px solid transparent;
     &:hover{
-        border-bottom:2px solid #4b59f7;
+        border-bottom:3px solid  #01b4e4;
     }
 
     @media screen and (max-width:960px){
@@ -107,7 +107,7 @@ export const Navlinks=styled(Link)`
       width:100%;
       display:table;
       &:hover{
-        color:#4b59f7;
+        color:#90cea1;
         transition:all 0.3s ease;
       }
     }
