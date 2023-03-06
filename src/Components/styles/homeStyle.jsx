@@ -3,10 +3,6 @@ import styled from "styled-components";
 
 
   export const MainHome=styled.main`
-    
-
-
-
     width:100%;
    height:auto;
 
@@ -24,5 +20,19 @@ width:100%;
  flex-direction:row;
  align-items:center;
  justify-content:space-between;
+ margin-bottom:40px
 `
 
+
+
+export const MoviesHome=styled.div`
+
+  display:grid;
+  grid-template-rows:    repeat(auto);
+grid-template-columns: repeat(5, 1fr);
+@media screen and (max-width:960px){
+  grid-template-rows:    repeat(auto);
+grid-template-columns: repeat(2, 1fr);
+    }
+
+`
