@@ -38,6 +38,14 @@ export const Text = styled.p`
 
 export const Image = styled.img`
   width: 100%;
+  -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+    &:hover{
+        -webkit-transform:scale(0.95);
+	transform: scale(0.95);
+    }
 `;
 
 export const Button = styled.button`

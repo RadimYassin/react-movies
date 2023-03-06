@@ -15,7 +15,7 @@ import styled ,{createGlobalStyle} from "styled-components";
 `
 export default GlobleStyle
 export const  Container=styled.div`
-border:${(props)=>props.bg ? "1px solid red" :null};
+//border:${(props)=>props.bg ? "1px solid red" :null};
 z-index:1;
 width:100%;
 max-width:1300px;

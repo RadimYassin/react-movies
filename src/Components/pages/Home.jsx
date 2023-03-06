@@ -29,7 +29,7 @@ export default function Home() {
           <MainHome>
                 <SeachHome>
                       <Form>
-                        <Form.Input  type="text" placeholder="serch a movie"  />
+                        <Form.Input  type="text" placeholder="search a movies"  />
                       </Form>
                        <select>
                            <option value="">movie</option>

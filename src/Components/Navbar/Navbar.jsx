@@ -6,7 +6,16 @@ import {
 
 } from './Navbar.element'
 function Navbar() {
+
+
+
   const [click, setClick] = useState(false)
+  window.addEventListener('resize', function(event) {
+    var w = document.documentElement.clientWidth;
+     if (w>960){
+        setClick(false)
+     }
+}, true)
 
   const handelClick=()=>setClick(!click);
   return (
