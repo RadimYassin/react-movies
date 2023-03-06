@@ -10,10 +10,6 @@ function Navbar() {
 
 
   const [click, setClick] = useState(false)
-<<<<<<< HEAD
-=======
-  
->>>>>>> 6ced7d27199d5d5022a5d7214dc845fbab81d974
   window.addEventListener('resize', function(event) {
     var w = document.documentElement.clientWidth;
      if (w>960){
