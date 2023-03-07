@@ -4,7 +4,7 @@ import { Container } from '../../GloblesStyles'
 import RegularList from '../../RegularList'
 import CardMovie from '../Container/CardMovie'
 import Form from '../Form/Form'
-import { MainHome ,SeachHome,MoviesHome } from '../styles/homeStyle'
+import { MainHome ,SeachHome,MoviesHome,SelectHome } from '../styles/homeStyle'
 
 export default function Home() {
   const [data, setData] = useState([]); // no data yet
@@ -23,7 +23,11 @@ export default function Home() {
       })
       .finally(() => setIsLoading(false)); // complete loading success/fail
   }, []);
-  console.log(data);
+   // envent for select 
+
+   const SelectType=(e)=>{
+    console.log(e.target.value);
+   }
   return (
     <Container bg mt="50px">
           <MainHome>
@@ -31,11 +35,11 @@ export default function Home() {
                       <Form>
                         <Form.Input  type="text" placeholder="search a movies"  />
                       </Form>
-                       <select>
-                           <option value="">movie</option>
-                           <option value="">Peaple</option>
-                           <option value="">Tv Shows</option>
-                       </select>
+                       <SelectHome onChange={SelectType} >
+                           <option value="movie">movie</option>
+                           <option value="peopale">Peaple</option>
+                           <option value="Tv Shows">Tv Shows</option>
+                       </SelectHome>
                 </SeachHome>
 
                  <MoviesHome>
