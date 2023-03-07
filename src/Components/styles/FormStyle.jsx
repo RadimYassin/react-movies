@@ -10,6 +10,7 @@ import styled from "styled-components";
     display:flex;
     flex-direction:row;
     align-items:center;
+   
     
   `
 
@@ -19,7 +20,7 @@ export const InputType=styled.input`
   font-size: 1.2rem;
   border-radius: 0.2rem;
   background-color: rgb(255, 255, 255);
-  border: none;
+  border:  1px solid #0d253f9f;
   padding:8px;
   width:${(props)=>props.width ? props.width: "50% "};
   &:focus{

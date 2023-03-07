@@ -20,7 +20,8 @@ width:100%;
  flex-direction:row;
  align-items:center;
  justify-content:space-between;
- margin-bottom:40px;
+ margin-bottom:60px;
+ 
 `
 
 
@@ -34,5 +35,24 @@ grid-template-columns: repeat(5, 1fr);
   grid-template-rows:    repeat(auto);
 grid-template-columns: repeat(2, 1fr);
     }
+
+`
+
+export const SelectHome=styled.select`
+appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 0.2rem 1em;
+  border-radius:6px;
+
+  color: #fff;
+  background-color:#0d253f;
+  background-image: none;
+  cursor: pointer;
+
+
 
 `
