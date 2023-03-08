@@ -21,6 +21,11 @@ export const Body = styled.div`
   flex: 1 1 auto;
   min-height: 1px;
   padding: 1.25rem;
+  &:hover{
+    background-color:#1d3a5a;
+    color:white;
+    
+  }
 `;
 
 export const Title = styled.h1`
