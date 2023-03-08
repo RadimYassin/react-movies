@@ -10,7 +10,7 @@ import styled from "styled-components";
 
   
 
-export const SeachHome=styled.div`
+export const Box=styled.div`
     
 
 
@@ -21,10 +21,9 @@ width:100%;
  align-items:center;
  justify-content:space-between;
  margin-bottom:60px;
+
  
 `
-
-
 
 export const MoviesHome=styled.div`
 
@@ -45,9 +44,12 @@ appearance: none;
   box-shadow: none;
   /* Personalize */
   flex: 1;
-  padding: 0.2rem 1em;
+
+  padding: 0.5rem 1em;
   border-radius:6px;
 
+  padding: 0.2rem 1em;
+  border-radius:6px;
   color: #fff;
   background-color:#0d253f;
   background-image: none;
@@ -55,4 +57,24 @@ appearance: none;
 
 
 
+`
+
+
+
+export const TextHome=styled.div`
+width:85%;
+font-size:30px;
+@media screen and (max-width:960px){
+  font-size:20px;
+    }
+  
+`
+export const PaginationHome=styled.div`
+  
+
+
+  display:flex;
+  justify-content:center;
+  margin-top:20px;
+  margin-bottom:20px;
 `
