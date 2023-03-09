@@ -60,12 +60,14 @@ export default function Home() {
                       <RegularList items={data} ItemC={CardMovie} resourceName="movie"/>
                 
                  </MoviesHome>
-                  <PaginationHome>
-                        <Stack spacing={2}>
-                    
-                        <Pagination count={10} page={page} onChange={handleChange} />
-                      </Stack>
-                  </PaginationHome>
+                   {
+               data.length ?
+                     <PaginationHome>
+                          <Stack spacing={2}>
+                          <Pagination count={10} page={page} color="primary" onChange={handleChange} />
+                        </Stack>
+                   </PaginationHome>:null
+                   }
                 
           </MainHome>
 
