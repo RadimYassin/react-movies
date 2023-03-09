@@ -21,11 +21,6 @@ export const Body = styled.div`
   flex: 1 1 auto;
   min-height: 1px;
   padding: 1.25rem;
-  &:hover{
-    background-color:#1d3a5a;
-    color:white;
-    
-  }
 `;
 
 export const Title = styled.h1`
@@ -58,12 +53,12 @@ export const Button = styled.button`
   margin-top: auto;
   width: 100%;
   color: #fff;
-  background-color: #01b4e4;
-  border-color: #28a745;
+  background-color:${(props)=>props.del ? "#18191a":"#01b4e4"};
+
+  border-color:${(props)=>props.del ? "#d80d0d":"#218838"};
   display: block;
   font-weight: bold;
   text-align: center;
-  vertical-align: middle;
   user-select: none;
   border: 1px solid transparent;
   padding: 0.375rem 0.75rem;
@@ -75,7 +70,8 @@ export const Button = styled.button`
 
   &:hover {
     color: #fff;
-    background-color: #218838;
-    border-color: #1e7e34;
-  }
+    background-color:${(props)=>props.del ? "#d80d0d":"#218838"};
+
+    border-color:${(props)=>props.del ?"#18191a":"#01b4e4"}};
+  
 `;

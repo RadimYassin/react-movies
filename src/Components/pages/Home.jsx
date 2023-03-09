@@ -3,7 +3,6 @@ import React, { useEffect ,useState} from 'react'
 import { Container } from '../../GloblesStyles'
 import RegularList from '../../RegularList'
 import CardMovie from '../Container/CardMovie'
-import Typography from '@mui/material/Typography';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import { MainHome ,Box,MoviesHome,SelectHome,TextHome,PaginationHome } from '../styles/homeStyle'
@@ -43,7 +42,7 @@ export default function Home() {
     setPage(value);
   };
   return (
-    <Container bg mt="50px">
+    <Container  mt="50px">
           <MainHome>
                 <Box>
                        <TextHome><p>{value && value}:</p></TextHome>

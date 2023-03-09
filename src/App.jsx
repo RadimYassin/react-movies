@@ -1,11 +1,14 @@
+import { Provider } from "react-redux"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { Navbar,Home,Top,WatchList } from "./Components"
 import GlobleStyle from "./GloblesStyles"
+import { store } from "./Redux/store"
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
+    <Provider store={store} >
+
+   <BrowserRouter>
             <GlobleStyle/>
             <Navbar/>
             <Routes>
@@ -15,7 +18,10 @@ function App() {
             </Routes>
       </BrowserRouter>
 
-    </div>
+    </Provider>
+   
+
+ 
   )
 }
 
