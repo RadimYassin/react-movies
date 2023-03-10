@@ -29,12 +29,12 @@ export const MoviesHome=styled.div`
 
   display:grid;
   grid-template-rows:    repeat(auto);
-grid-template-columns: repeat(5, 1fr);
+grid-template-columns: repeat(4, 1fr);
+gap:20px;
 @media screen and (max-width:960px){
   grid-template-rows:    repeat(auto);
 grid-template-columns: repeat(2, 1fr);
     }
-
 `
 
 export const SelectHome=styled.select`
