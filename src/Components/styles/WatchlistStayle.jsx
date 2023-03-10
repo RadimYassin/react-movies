@@ -7,14 +7,17 @@ import styled from "styled-components";
    justify-content:space-between;
    align-items:center;
    padding:8px;
-   background-color:red;
+  
+   border:1px solid black;
 
   `
 
   
 
 export const MoviesWatcheList=styled.div`
-
+  
+  border:${(props)=>props.bd? "1px solid black":null};
+  border-top:none;
   display:grid;
   grid-template-rows:    repeat(auto);
 grid-template-columns: repeat(5, 1fr);
@@ -32,7 +35,16 @@ color:#282727;
 `
 
 export const CountWatcheList=styled.span`
-
+  background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
 
 `
 

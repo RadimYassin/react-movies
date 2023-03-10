@@ -14,13 +14,13 @@ export const Box=styled.div`
     
 
 
-padding:8px 0;
-width:100%;
+ padding:8px 0;
  display:flex;
  flex-direction:row;
  align-items:center;
  justify-content:space-between;
  margin-bottom:60px;
+
 
  
 `
@@ -38,26 +38,36 @@ grid-template-columns: repeat(2, 1fr);
 `
 
 export const SelectHome=styled.select`
-appearance: none;
+
   outline: 0;
   border: 0;
   box-shadow: none;
   /* Personalize */
-  flex: 1;
 
-  padding: 0.5rem 1em;
+  padding:7px 16px;
   border-radius:6px;
 
-  padding: 0.2rem 1em;
-  border-radius:6px;
   color: #fff;
   background-color:#0d253f;
-  background-image: none;
-  cursor: pointer;
 
+  cursor: pointer;
+  
 
 
 `
+export const OptionHome=styled.option`
+
+
+&:checked{
+  background-color:#3c5b7c;
+}
+
+
+ 
+  
+`
+
+
 
 
 

@@ -3,8 +3,7 @@ import styled from "styled-components";
 
 
   export const FormConatiner=styled.form`
-  
-    width:100%;
+   flex:1;
     height:40px;
     padding:3px;
     display:flex;
@@ -22,11 +21,16 @@ export const InputType=styled.input`
   background-color: rgb(255, 255, 255);
   border:  1px solid #0d253f9f;
   padding:8px;
+   
+
   width:${(props)=>props.width ? props.width: "50% "};
   &:focus{
     outline:none;
     border: 1px solid #0d253f9f;
   }
+  @media screen and (max-width:960px){
+   width:80%;
+    }
  
 
 
