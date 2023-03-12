@@ -1,11 +1,15 @@
 .modaltConatainer{
     font-size: 23px;
+    width: 50%;
+    border: none;
+    outline: none;
+    border-radius: 20px;
 }
 @media screen and (max-width:960px){
     .modaltConatainer{
 
          width: 90%;
-        height: 90%;
+ 
 
     }
    }

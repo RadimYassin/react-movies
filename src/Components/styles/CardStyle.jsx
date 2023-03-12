@@ -1,21 +1,23 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-margin:6px;
   display: flex;
-
-
   flex-direction: column;
-  min-width: 0;
-  max-width:${(props)=>props.w ? props.w :"300px"};
+   width:300px;
   word-wrap: break-word;
   background-color: #fff;
-
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   overflow: hidden;
+ height:500px;
+ @media screen and (max-width:760px){
+width:90%; 
+margin : 0 auto;
+margin-bottom:40px;
+    }
+  
 `;
 
 export const Body = styled.div`
@@ -27,11 +29,9 @@ export const Body = styled.div`
 `;
 
 export const Title = styled.h1`
-margin:${(props)=>props.m ? props.m :null};
+  font-size: 1rem;
 
-  font-size: 1.25rem;
-  font-weight: bold;
-
+  margin: 0;
 `;
 
 export const Text = styled.p`
@@ -40,31 +40,22 @@ export const Text = styled.p`
 `;
 
 export const Image = styled.img`
-margin:${(props)=>props.mt ? props.mt:null};
   width: 100%;
-  height:350px;
-  -webkit-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-    &:hover{
-        -webkit-transform:scale(0.95);
-	transform: scale(0.95);
-    }
+  height:75%;
+  
 `;
 
 export const Button = styled.button`
-margin-top:${(props)=>props.mt ? props.mt: null};
   cursor: pointer;
-
-
+  margin-top: auto;
+  width: 100%;
   color: #fff;
-  background-color:${(props)=>props.del ? "#18191a":"#01b4e4"};
-
-  border-color:${(props)=>props.del ? "#d80d0d":"#218838"};
+  background-color: #28a745;
+  border-color: #28a745;
   display: block;
   font-weight: bold;
   text-align: center;
+  vertical-align: middle;
   user-select: none;
   border: 1px solid transparent;
   padding: 0.375rem 0.75rem;
@@ -76,8 +67,7 @@ margin-top:${(props)=>props.mt ? props.mt: null};
 
   &:hover {
     color: #fff;
-    background-color:${(props)=>props.del ? "#d80d0d":"#218838"};
-
-    border-color:${(props)=>props.del ?"#18191a":"#01b4e4"}};
-  
+    background-color: #218838;
+    border-color: #1e7e34;
+  }
 `;

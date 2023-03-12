@@ -22,15 +22,6 @@ export default function ModalMovie({movie,setOpen,Result}) {
    console.log(movie)
   return (
     <>
-    <Card key={id}  >
-    <Card.Img mt="4px" src={`https://image.tmdb.org/t/p/w300${poster_path}`} color="neutral" onClick={() => setOpen(true)} alt={movie.title} />
-    {
-      Result
-        ?
-        <Card.Btn mt="30px" del="delete" onClick={() => dispatch({ type: "Del_M", payload: movie.id })}>delete </Card.Btn>
-        :
-        (<Card.Btn  mt="30px"  onClick={() => dispatch({ type: "ADD_M", payload: movie })}>add </Card.Btn>)}
-  </Card>
 
     <Details>
          

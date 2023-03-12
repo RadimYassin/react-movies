@@ -20,16 +20,7 @@ export default function BasicModal({children,setOpen,open}) {
         <Sheet
           variant="soft"
            className="modaltConatainer"
-          sx={{
-            borderRadius: 'md',
-          
-            boxShadow: 'lg',
-           width:'70%',
-         
-     
         
-        
-          }}
         >
           <ModalClose
             variant="outlined"
@@ -65,7 +56,7 @@ const ContainerD=styled.div`
    @media screen and (max-width:960px){
      flex-direction:column;
      align-items:center;
-      height:100%;
+
 
    
 

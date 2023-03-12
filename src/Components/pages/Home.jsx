@@ -62,7 +62,7 @@ export default function Home() {
                    {
                data.length ?
                      <PaginationHome>
-                          <Stack spacing={2}>
+                          <Stack  spacing={1}>
                           <Pagination count={10} page={page} color="primary" onChange={handleChange} />
                         </Stack>
                    </PaginationHome>:null

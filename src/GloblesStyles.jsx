@@ -18,7 +18,7 @@ export const  Container=styled.div`
 //border:${(props)=>props.bg ? "1px solid red" :null};
 z-index:1;
 width:100%;
-max-width:1300px;
+max-width:1400px;
 margin-left:auto;
 margin-right:auto;
 padding-left:50px;

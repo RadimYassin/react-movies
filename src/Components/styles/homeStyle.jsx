@@ -13,32 +13,38 @@ import styled from "styled-components";
 export const BoxHome=styled.div`
     
 
-
- padding:8px 0;
+ padding:8px 8px;
  display:flex;
  flex-direction:row;
  align-items:center;
+ margin-bottom:40px;
+
  justify-content:space-between;
- margin-bottom:60px;
+ @media screen and (max-width:960px){
+width:100%; 
+margin : 0 auto;
+margin-bottom:40px;
+    }
 
 
  
 `
 
 export const MoviesHome=styled.div`
-
-  display:grid;
-  grid-template-rows:    repeat(auto);
-grid-template-columns: repeat(4, 1fr);
-gap:20px;
+ display:flex;
+ flex-direction:row;
+ flex-wrap:wrap;
+ align-items:center;
+ justify-content:space-between;
+  gap:8px;
 @media screen and (max-width:960px){
-  grid-template-rows:    repeat(auto);
-grid-template-columns: repeat(2, 1fr);
+  justify-content:center;
+ 
     }
 `
 
 export const SelectHome=styled.select`
-  width:140px;
+
   outline: 0;
   border: 0;
   box-shadow: none;
@@ -73,17 +79,17 @@ export const OptionHome=styled.option`
 
 
 export const TextHome=styled.div`
-width:85%;
 font-size:30px;
 @media screen and (max-width:960px){
   font-size:20px;
+  margin-left:20px;
     }
   
 `
 export const PaginationHome=styled.div`
   
 
-
+ width:100%;
   display:flex;
   justify-content:center;
   margin-top:20px;

@@ -10,10 +10,14 @@ function Navbar() {
 
 
   const [click, setClick] = useState(false)
+  
   window.addEventListener('resize', function(event) {
-    var w = document.documentElement.clientWidth;
-     if (w>960){
+
+    let w = document.documentElement.clientWidth;
+    console.log(w);
+     if (w ==960){
         setClick(false)
+        console.log("true");
      }
 }, true)
 
