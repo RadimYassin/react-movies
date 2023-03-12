@@ -35,7 +35,6 @@ gap:20px;
   grid-template-rows:    repeat(auto);
 grid-template-columns: repeat(2, 1fr);
     }
-
 `
 
 export const SelectHome=styled.select`
