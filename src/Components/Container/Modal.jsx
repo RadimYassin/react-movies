@@ -1,9 +1,10 @@
 import * as React from 'react';
-import Button from '@mui/joy/Button';
+import '../styles/style.css'
 import Modal from '@mui/joy/Modal';
 import ModalClose from '@mui/joy/ModalClose';
-import Typography from '@mui/joy/Typography';
+
 import Sheet from '@mui/joy/Sheet';
+import styled from 'styled-components';
 
 export default function BasicModal({children,setOpen,open}) {
 
@@ -17,11 +18,17 @@ export default function BasicModal({children,setOpen,open}) {
         sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
       >
         <Sheet
-          variant="outlined"
+          variant="soft"
+           className="modaltConatainer"
           sx={{
             borderRadius: 'md',
-            p: 3,
+          
             boxShadow: 'lg',
+           width:'70%',
+         
+     
+        
+        
           }}
         >
           <ModalClose
@@ -35,14 +42,36 @@ export default function BasicModal({children,setOpen,open}) {
               bgcolor: 'background.body',
             }}
           />
-          <div >
+          <ContainerD    >
           {
           children
           }
-          </div>
+          </ContainerD>
       
         </Sheet>
       </Modal>
     </React.Fragment>
   );
 }
+
+
+
+
+const ContainerD=styled.div`
+   display:flex;
+   justify-content:space-evenly;
+   gap:20px;
+
+   @media screen and (max-width:960px){
+     flex-direction:column;
+     align-items:center;
+      height:100%;
+
+   
+
+    }
+
+`
+
+
+

@@ -10,7 +10,7 @@ import styled from "styled-components";
 
   
 
-export const Box=styled.div`
+export const BoxHome=styled.div`
     
 
 
@@ -29,7 +29,8 @@ export const MoviesHome=styled.div`
 
   display:grid;
   grid-template-rows:    repeat(auto);
-grid-template-columns: repeat(5, 1fr);
+grid-template-columns: repeat(4, 1fr);
+gap:20px;
 @media screen and (max-width:960px){
   grid-template-rows:    repeat(auto);
 grid-template-columns: repeat(2, 1fr);
@@ -38,7 +39,7 @@ grid-template-columns: repeat(2, 1fr);
 `
 
 export const SelectHome=styled.select`
-
+  width:140px;
   outline: 0;
   border: 0;
   box-shadow: none;
@@ -51,16 +52,17 @@ export const SelectHome=styled.select`
   background-color:#0d253f;
 
   cursor: pointer;
-  
+  @media screen and (max-width:960px){
+    margin-right:5%;
+    }
 
 
 `
 export const OptionHome=styled.option`
-
-
 &:checked{
   background-color:#3c5b7c;
 }
+
 
 
  

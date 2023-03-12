@@ -3,11 +3,14 @@ import styled from 'styled-components';
 export const Container = styled.div`
 margin:6px;
   display: flex;
+
+
   flex-direction: column;
   min-width: 0;
-  max-width: 250px;
+  max-width:${(props)=>props.w ? props.w :"300px"};
   word-wrap: break-word;
   background-color: #fff;
+
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
@@ -37,7 +40,9 @@ export const Text = styled.p`
 `;
 
 export const Image = styled.img`
+margin:${(props)=>props.mt ? props.mt:null};
   width: 100%;
+  height:350px;
   -webkit-transform: scale(1);
 	transform: scale(1);
 	-webkit-transition: .3s ease-in-out;
@@ -49,9 +54,10 @@ export const Image = styled.img`
 `;
 
 export const Button = styled.button`
+margin-top:${(props)=>props.mt ? props.mt: null};
   cursor: pointer;
-  margin-top: auto;
-  width: 100%;
+
+
   color: #fff;
   background-color:${(props)=>props.del ? "#18191a":"#01b4e4"};
 

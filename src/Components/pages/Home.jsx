@@ -5,7 +5,7 @@ import RegularList from '../../RegularList'
 import CardMovie from '../Container/CardMovie'
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
-import { MainHome ,Box,MoviesHome,SelectHome,TextHome,PaginationHome } from '../styles/homeStyle'
+import { MainHome ,BoxHome,MoviesHome,SelectHome,TextHome,PaginationHome, OptionHome } from '../styles/homeStyle'
 
 export default function Home() {
   const [data, setData] = useState([]); // no data yet
@@ -44,15 +44,15 @@ export default function Home() {
   return (
     <Container  mt="50px">
           <MainHome>
-                <Box>
+                <BoxHome>
                        <TextHome><p>{value && value}:</p></TextHome>
-                       <SelectHome onChange={SelectV} >
-                           <option value="now_playing">now_playing</option>
-                           <option value="popular">popular</option>
-                           <option value="top_rated">top_rated</option>
-                           <option value="upcoming">upcoming</option>
-                       </SelectHome>
-                </Box>
+                     <SelectHome onChange={SelectV} >
+                           <OptionHome value="now_playing">now playing</OptionHome>
+                           <OptionHome value="popular">popular</OptionHome>
+                           <OptionHome value="top_rated">top rated</OptionHome>
+                           <OptionHome value="upcoming">upcoming</OptionHome>
+                    </SelectHome>
+                </BoxHome>
             
                  <MoviesHome>
                       

@@ -1,0 +1,41 @@
+.modaltConatainer{
+    font-size: 23px;
+}
+@media screen and (max-width:960px){
+    .modaltConatainer{
+
+         width: 90%;
+        height: 90%;
+
+    }
+   }
+
+.info{
+   padding: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.info .head h1{
+font-size: 22px;
+}
+
+
+.head{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.vote{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.vote svg{
+ font-size: xx-large;
+}
