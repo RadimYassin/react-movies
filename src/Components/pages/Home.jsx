@@ -45,7 +45,10 @@ export default function Home() {
     <Container  mt="50px">
           <MainHome>
                 <BoxHome>
-                       <TextHome><p>{value && value}:</p></TextHome>
+                       <TextHome>
+                        <p>{value && value}:</p>
+                        
+                        </TextHome>
                      <SelectHome onChange={SelectV} >
                            <OptionHome value="now_playing">now playing</OptionHome>
                            <OptionHome value="popular">popular</OptionHome>
@@ -62,8 +65,8 @@ export default function Home() {
                    {
                data.length ?
                      <PaginationHome>
-                          <Stack  spacing={1}>
-                          <Pagination count={10} page={page} color="primary" onChange={handleChange} />
+                          <Stack sx={{width:'100%'}}  spacing={1}>
+                          <Pagination   count={9} page={page} color="primary" onChange={handleChange} />
                         </Stack>
                    </PaginationHome>:null
                    }

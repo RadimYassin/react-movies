@@ -17,13 +17,13 @@ export const BoxHome=styled.div`
  display:flex;
  flex-direction:row;
  align-items:center;
- margin-bottom:40px;
+ margin-bottom:60px;
 
  justify-content:space-between;
  @media screen and (max-width:960px){
 width:100%; 
 margin : 0 auto;
-margin-bottom:40px;
+margin-bottom:60px;
     }
 
 
@@ -80,6 +80,19 @@ export const OptionHome=styled.option`
 
 export const TextHome=styled.div`
 font-size:30px;
+position: relative;
+&::before{
+  content:" ";
+  height: 7px;
+  border-radius:5px;
+  width: 100%;
+  background: rgb(1,180,228);
+background: linear-gradient(90deg, rgba(1,180,228,1) 18%, rgba(144,206,161,1) 88%);
+  display: block;
+  position: absolute;
+  top: 40px;
+  left: 0;
+}
 @media screen and (max-width:960px){
   font-size:20px;
   margin-left:20px;
@@ -94,4 +107,10 @@ export const PaginationHome=styled.div`
   justify-content:center;
   margin-top:20px;
   margin-bottom:20px;
+  @media screen and (max-width:960px){
+
+    width:auto;
+
+    }
+  
 `

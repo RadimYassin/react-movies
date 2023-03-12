@@ -50,12 +50,15 @@ export const Button = styled.button`
   margin-top: auto;
   width: 100%;
   color: #fff;
-  background-color: #28a745;
+  background: rgb(1,180,228);
+  background:${(props)=>props.add==="add" ? "linear-gradient(90deg, #007bff 18%, rgba(144,206,161,1) 88%)":"#000"};
+  
+
   border-color: #28a745;
   display: block;
   font-weight: bold;
   text-align: center;
-  vertical-align: middle;
+
   user-select: none;
   border: 1px solid transparent;
   padding: 0.375rem 0.75rem;
@@ -67,7 +70,6 @@ export const Button = styled.button`
 
   &:hover {
     color: #fff;
-    background-color: #218838;
-    border-color: #1e7e34;
+    background-color:${(props)=>props.add==="add" ? "#0881f9":"#ff0000"};    border-color: #dadada;
   }
 `;

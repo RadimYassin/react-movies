@@ -36,11 +36,11 @@ export default function CardMovie({ movie }) {
           {
             Result
               ?
-              <Card.Btn del="delete" onClick={() => dispatch({ type: "Del_M", payload: movie.id })}>delete </Card.Btn>
+              <Card.Btn del='del'onClick={() => dispatch({ type: "Del_M", payload: movie.id })}>delete </Card.Btn>
               :
               (
                 <>
-                 <Card.Btn onClick={() => dispatch({ type: "ADD_M", payload: movie })}>add </Card.Btn>
+                 <Card.Btn add='add'  onClick={() => dispatch({ type: "ADD_M", payload: movie })}>add </Card.Btn>
                  
                 </>
               
