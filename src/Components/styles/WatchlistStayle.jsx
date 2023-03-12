@@ -17,15 +17,16 @@ import styled from "styled-components";
 export const MoviesWatcheList=styled.div`
   
   border:${(props)=>props.bd? "1px solid black":null};
-  border-top:none;
-  display:grid;
-  grid-template-rows:    repeat(auto);
-grid-template-columns: repeat(5, 1fr);
+  display:flex;
+ flex-direction:row;
+ flex-wrap:wrap;
+ align-items:center;
+ justify-content:space-between;
+  gap:8px;
 @media screen and (max-width:960px){
-  grid-template-rows:    repeat(auto);
-grid-template-columns: repeat(2, 1fr);
+  justify-content:center;
+ 
     }
-
 `
 
 export const TitleWatcheLisT=styled.h1`
@@ -58,5 +59,7 @@ align-items:center;
 justify-content:center;
 gap:20px;
 `
+
+
 
 
