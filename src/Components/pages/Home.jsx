@@ -5,10 +5,12 @@ import RegularList from '../../RegularList'
 import CardMovie from '../Container/CardMovie'
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
-import { MainHome ,BoxHome,MoviesHome,SelectHome,TextHome,PaginationHome, OptionHome } from '../styles/homeStyle'
+import { MainHome ,BoxHome,MoviesHome,SelectHome,PaginationHome, OptionHome } from '../styles/homeStyle'
+import Search from '../Search'
 
 export default function Home() {
   const [data, setData] = useState([]); // no data yet
+  const [filteredData, setFilteredData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [value,setValue]=useState("now_playing")
   const [page, setPage] = React.useState(1);
@@ -24,7 +26,8 @@ export default function Home() {
     setIsLoading(true);
     axios.get(`https://api.themoviedb.org/3/movie/${value}?api_key=8bb482f2f727dd736af358131fd13dab&language=en-US&page=${page}`)
       .then(data => {
-        setData(data.data.results); // update state with response
+        setData(data.data.results);
+        setFilteredData(data.data.results);
       })
       .catch(error => {
         // handle any errors/rejected Promises
@@ -41,25 +44,31 @@ export default function Home() {
    const handleChange = (event, value) => {
     setPage(value);
   };
+
+  const handleSearch = (query) => {
+    if (query) {
+      setFilteredData(data.filter(movie => movie.original_title.toLowerCase().includes(query.toLowerCase())));
+    } else {
+      setFilteredData(data);
+    }
+  };
+
   return (
     <Container  mt="50px">
           <MainHome>
                 <BoxHome>
-                       <TextHome>
-                        <p>{value && value}:</p>
-                        
-                        </TextHome>
+                       <Search onSearch={handleSearch} />
+
                      <SelectHome onChange={SelectV} >
-                           <OptionHome value="now_playing">now playing</OptionHome>
-                           <OptionHome value="popular">popular</OptionHome>
-                           <OptionHome value="top_rated">top rated</OptionHome>
-                           <OptionHome value="upcoming">upcoming</OptionHome>
+                           <OptionHome value="now_playing">Now Playing</OptionHome>
+                           <OptionHome value="popular">Popular</OptionHome>
+                           <OptionHome value="top_rated">Top Rated</OptionHome>
+                           <OptionHome value="upcoming">Upcoming</OptionHome>
                     </SelectHome>
                 </BoxHome>
-            
-                 <MoviesHome>
+                <MoviesHome>
                       
-                      <RegularList items={data} ItemC={CardMovie} resourceName="movie"/>
+                      <RegularList items={filteredData} ItemC={CardMovie} resourceName="movie"/>
                 
                  </MoviesHome>
                    {
@@ -72,7 +81,6 @@ export default function Home() {
                    }
                 
           </MainHome>
-
     </Container>
   )
 }

@@ -50,26 +50,25 @@ export const Button = styled.button`
   margin-top: auto;
   width: 100%;
   color: #fff;
-  background: rgb(1,180,228);
-  background:${(props)=>props.add==="add" ? "linear-gradient(90deg, #007bff 18%, rgba(144,206,161,1) 88%)":"#000"};
-  
-
-  border-color: #28a745;
+  background-color: ${(props) => (props.add === "add" ? "#007bff" : "#000")};
+  border: none;
   display: block;
   font-weight: bold;
   text-align: center;
-
   user-select: none;
-  border: 1px solid transparent;
-  padding: 0.375rem 0.75rem;
+  padding: 0.5rem 1rem;
   font-size: 1rem;
   line-height: 1.5;
-  border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border-radius: 25px;
+  transition: all 0.3s ease;
 
   &:hover {
-    color: #fff;
-    background-color:${(props)=>props.add==="add" ? "#0881f9":"#ff0000"};    border-color: #dadada;
+    background-color: ${(props) => (props.add === "add" ? "#0881f9" : "#ff0000")};
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: scale(0.95);
   }
 `;

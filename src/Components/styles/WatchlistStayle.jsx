@@ -8,7 +8,7 @@ import styled from "styled-components";
    align-items:center;
    padding:8px;
   
-   border:1px solid black;
+   
 
   `
 
@@ -16,7 +16,6 @@ import styled from "styled-components";
 
 export const MoviesWatcheList=styled.div`
   
-  border:${(props)=>props.bd? "1px solid black":null};
   display:flex;
  flex-direction:row;
  flex-wrap:wrap;
